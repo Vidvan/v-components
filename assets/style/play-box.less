@@ -1,0 +1,130 @@
+.play-box {
+	position: relative;
+	height: 75px;
+	background: rgba(0, 21, 41, 0.8);
+	border: 1px solid rgba(16, 108, 191, 1);
+	box-shadow: 0px 3px 6px rgba(80, 174, 255, 0.45);
+	padding: 14px 20px 10px 50px;
+	.btn-close {
+		position: absolute;
+		right: 3px;
+		top: 0;
+		color: #a6adb4;
+		&:hover {
+			color: #acdbff;
+		}
+	}
+	.btn-play {
+		position: absolute;
+		left: 10px;
+		top: 12px;
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		background: #054d8a;
+		border: 1px solid #0080ff;
+		color: #ffffff;
+		&:hover {
+			color: #acdbff;
+		}
+		&.pause {
+			i:before {
+				content: '\E073';
+			}
+		}
+	}
+	.bar-wrap {
+		padding-top: 10px;
+		position: relative;
+		.play-bar {
+			.layui-slider {
+				background: #40505f;
+			}
+		}
+		.scale-bar {
+			position: relative;
+			.info {
+				color: #a6adb4;
+				font-size: 12px;
+				.date,
+				.time {
+					line-height: 14px;
+				}
+			}
+			.scale {
+				margin-top: 9px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				.item {
+					position: relative;
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1;
+					.info {
+						margin-left: -15px;
+					}
+					&::before {
+						content: '';
+						background-color: #40505f;
+						width: 1px;
+						height: 7px;
+						position: absolute;
+						left: 0;
+						top: -9px;
+					}
+					&:first-child {
+						&::before {
+							content: none;
+						}
+						.info {
+							margin-left: -2px;
+						}
+					}
+				}
+			}
+			.last-item {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+	&.play-box-white {
+		background: rgba(255, 255, 255, 0.85);
+		border: 1px solid rgba(255, 255, 255, 1);
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		.btn-play {
+			border-radius: 50%;
+			border: 0;
+			background: #0c68be;
+			i {
+				vertical-align: -1px;
+			}
+		}
+		.bar-wrap {
+			.play-bar {
+				.layui-slider {
+					background: #dddddd;
+					.layui-slider-bar {
+						background: #0c68be !important;
+					}
+					.layui-slider-wrap-btn {
+						border-color: #0c68be;
+					}
+				}
+			}
+			.scale-bar {
+				.info {
+					color: #999999;
+				}
+				.scale .item::before {
+					background: #999999;
+				}
+			}
+		}
+	}
+}

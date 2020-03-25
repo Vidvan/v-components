@@ -1,0 +1,35 @@
+@heightInput: 30px;
+.search-box {
+	height: @heightInput;
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	.search-text {
+		width: calc(~'100% - 30px');
+		height: 100%;
+		border: none;
+		border-radius: 3px;
+		padding: 0;
+		padding-left: 10px;
+		&:focus {
+			outline: none;
+		}
+		&::-webkit-input-placeholder {
+			color: #aaaaaa;
+			font-size: 13px;
+		}
+
+		&::-moz-placeholder {
+			color: #aaaaaa;
+			font-size: 13px;
+		}
+
+		&:-ms-input-placeholder {
+			color: #aaaaaa;
+			font-size: 13px;
+		}
+	}
+	.btn-search {
+		color: #999999;
+		font-size: 14px;
+	}
+}
